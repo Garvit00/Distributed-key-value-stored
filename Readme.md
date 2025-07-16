@@ -40,7 +40,7 @@ g++ -std=c++17 test/test_cases.cpp src/kv-store.cpp -o test/test_kvstore -lws2_3
 ```
 
 ```bash
-./client 5000 # another teminal
+./client 5000  # Another Terminal
 ```
 
 ### Test Commands
