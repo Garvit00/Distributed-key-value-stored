@@ -40,7 +40,7 @@ g++ -std=c++17 test/test_cases.cpp src/kv-store.cpp -o test/test_kvstore -lws2_3
 ```
 
 ```
-./client
+./client 5000 #another teminal
 ```
 
 ### Test Commands
@@ -50,3 +50,18 @@ PUT email garvit@example.com
 GET name
 DELETE email
 ```
+
+---
+
+## 🔮 Future Improvements (Fault Tolerance and Scaling)
+
+- 🔁 **Replication**: Implement a `ReplicaManager` to forward all `PUT`/`DELETE` commands to follower servers
+- 🗳️ **Leader Election**: Use the Bully algorithm or Raft to elect a new leader when the current one fails
+- ❤️ **Heartbeat Monitoring**: Add regular “I'm alive” messages between nodes to detect leader failure
+- 📜 **Write-Ahead Logging**: Log all operations to disk before execution to allow replay after a crash
+- 💾 **Persistence**: Periodically save the key-value store to disk and load it on server startup
+- 🔀 **Multi-key Fetch (MGET)**: Add support to fetch multiple key-values in one command (e.g., `MGET name email`)
+- 🌐 **Quorum Reads/Writes**: Extend with read/write quorum logic for better consistency during network partitions
+- 🔧 **Dockerization**: Package server and client in Docker containers for simplified deployment
+
+---
