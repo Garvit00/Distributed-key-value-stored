@@ -27,7 +27,7 @@ make clean  # Cleans up binaries
 
 ```
 ### Compile Manually 
-```
+```bash
 g++ -std=c++17 src/server.cpp src/kv-store.cpp -o server -lws2_32
 g++ -std=c++17 src/client.cpp -o client -lws2_32
 g++ -std=c++17 test/test_cases.cpp src/kv-store.cpp -o test/test_kvstore -lws2_32
@@ -35,16 +35,16 @@ g++ -std=c++17 test/test_cases.cpp src/kv-store.cpp -o test/test_kvstore -lws2_3
 ```
 ### Run App
 
-```
+```bash
 ./server 5000
 ```
 
-```
-./client 5000 #another teminal
+```bash
+./client 5000 # another teminal
 ```
 
 ### Test Commands
-```
+```bash
 PUT name Garvit
 PUT email garvit@example.com
 GET name
